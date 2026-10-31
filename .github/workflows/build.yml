@@ -12,10 +12,10 @@ jobs:
       - uses: gradle/actions/setup-gradle@v4
         with:
           gradle-version: current
-      - run: unzip smoothoutline.zip
+      - run: unzip customcrosshair.zip
       - run: gradle build
-        working-directory: smoothoutline
+        working-directory: customcrosshair
       - uses: actions/upload-artifact@v4
         with:
           name: mod
-          path: smoothoutline/build/libs/*.jar
+          path: customcrosshair/build/libs/*.jar
